@@ -1,0 +1,608 @@
+- id: '1589895337137'
+  name: test
+  entities:
+    light.marvel:
+      brightness: 74
+      effect: none
+      effect_list:
+      - colorloop
+      - random
+      friendly_name: Marvel
+      hs_color:
+      - 166.667
+      - 3.529
+      max_mireds: 500
+      min_mireds: 153
+      rgb_color:
+      - 246
+      - 255
+      - 253
+      state: 'on'
+      supported_features: 63
+      xy_color:
+      - 0.315
+      - 0.332
+    switch.powerplug1:
+      friendly_name: powerPlug1
+      state: 'on'
+- id: '1590086245718'
+  name: Morning Ambiance
+  entities:
+    switch.ambiancelight2:
+      friendly_name: ChristmasAmbientLight
+      state: 'on'
+    switch.powerplug1:
+      friendly_name: KitchenAmbiance
+      state: 'on'
+- id: '1590379261654'
+  name: Colton_Asleep
+  entities:
+    light.halfdome:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      friendly_name: Halfdome
+      supported_features: 63
+      state: 'off'
+    light.masterhallway:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 3
+      color_temp: 413
+      friendly_name: MasterHallway
+      supported_features: 43
+      state: 'on'
+- id: '1608593186077'
+  name: OnPhone
+  entities:
+    light.halfdome:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 36
+      hs_color:
+      - 359.657
+      - 68.627
+      rgb_color:
+      - 255
+      - 80
+      - 81
+      xy_color:
+      - 0.617
+      - 0.305
+      effect: none
+      friendly_name: Halfdome
+      supported_features: 63
+      state: 'on'
+- id: '1608593214679'
+  name: Off Phone
+  entities:
+    light.halfdome:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 36
+      hs_color:
+      - 0
+      - 1.176
+      rgb_color:
+      - 255
+      - 252
+      - 252
+      xy_color:
+      - 0.326
+      - 0.329
+      effect: none
+      friendly_name: Halfdome
+      supported_features: 63
+      state: 'on'
+- id: '1609619004624'
+  name: Movie Time
+  entities:
+    light.halfdome:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      friendly_name: Halfdome
+      supported_features: 63
+      state: 'off'
+    light.pixar:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 219
+      hs_color:
+      - 243.571
+      - 32.941
+      rgb_color:
+      - 175
+      - 171
+      - 255
+      xy_color:
+      - 0.259
+      - 0.225
+      effect: none
+      friendly_name: Pixar
+      supported_features: 63
+      state: 'on'
+    light.bungie:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 112
+      hs_color:
+      - 243.571
+      - 32.941
+      rgb_color:
+      - 175
+      - 171
+      - 255
+      xy_color:
+      - 0.259
+      - 0.225
+      effect: none
+      friendly_name: Bungie
+      supported_features: 63
+      state: 'on'
+- id: '1609638545041'
+  name: Living Room
+  entities:
+    light.343:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 255
+      hs_color:
+      - 173.333
+      - 3.529
+      rgb_color:
+      - 246
+      - 255
+      - 254
+      xy_color:
+      - 0.314
+      - 0.331
+      effect: none
+      friendly_name: '343'
+      supported_features: 63
+      state: 'on'
+    light.bungie:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 255
+      hs_color:
+      - 173.333
+      - 3.529
+      rgb_color:
+      - 246
+      - 255
+      - 254
+      xy_color:
+      - 0.314
+      - 0.331
+      effect: none
+      friendly_name: Bungie
+      supported_features: 63
+      state: 'on'
+    light.halfdome:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 255
+      hs_color:
+      - 0
+      - 0.784
+      rgb_color:
+      - 255
+      - 253
+      - 253
+      xy_color:
+      - 0.325
+      - 0.329
+      effect: none
+      friendly_name: Halfdome
+      supported_features: 63
+      state: 'on'
+    light.marvel:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 255
+      hs_color:
+      - 173.333
+      - 3.529
+      rgb_color:
+      - 246
+      - 255
+      - 254
+      xy_color:
+      - 0.314
+      - 0.331
+      effect: none
+      friendly_name: Marvel
+      supported_features: 63
+      state: 'on'
+    light.pixar:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 255
+      hs_color:
+      - 173.333
+      - 3.529
+      rgb_color:
+      - 246
+      - 255
+      - 254
+      xy_color:
+      - 0.314
+      - 0.331
+      effect: none
+      friendly_name: Pixar
+      supported_features: 63
+      state: 'on'
+- id: '1610395542151'
+  name: MasterBathroom-MorningTime-Scene
+  entities:
+    light.masterbathroomleft:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 15
+      color_temp: 377
+      effect: none
+      friendly_name: MasterBathroomLeft
+      supported_features: 63
+      state: 'on'
+    light.master_bathroom_center:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 13
+      color_temp: 330
+      effect: none
+      friendly_name: Master Bathroom Center
+      supported_features: 63
+      state: 'on'
+    light.masterbathright:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 14
+      color_temp: 340
+      friendly_name: MasterBathRight
+      supported_features: 43
+      state: 'on'
+- id: '1610395789603'
+  name: MasterBathroom - Morning Routine - Scene
+  entities:
+    light.masterbathroomleft:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 204
+      color_temp: 226
+      effect: none
+      friendly_name: MasterBathroomLeft
+      supported_features: 63
+      state: 'on'
+    light.master_bathroom_center:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 194
+      color_temp: 237
+      effect: none
+      friendly_name: Master Bathroom Center
+      supported_features: 63
+      state: 'on'
+    light.masterbathright:
+      min_mireds: 153
+      max_mireds: 454
+      brightness: 201
+      color_temp: 254
+      friendly_name: MasterBathRight
+      supported_features: 43
+      state: 'on'
+- id: '1610396169855'
+  name: Master Bathroom Off
+  entities:
+    light.masterbathroomleft:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      friendly_name: MasterBathroomLeft
+      supported_features: 63
+      state: 'off'
+    light.master_bathroom_center:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      friendly_name: Master Bathroom Center
+      supported_features: 63
+      state: 'off'
+    light.masterbathright:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: MasterBathRight
+      supported_features: 43
+      state: 'off'
+- id: '1610659715443'
+  name: LivingroomLowLights
+  entities:
+    light.343:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 133
+      color_temp: 500
+      effect: none
+      friendly_name: '343'
+      supported_features: 63
+      state: 'on'
+    light.bungie:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 84
+      color_temp: 500
+      effect: none
+      friendly_name: Bungie
+      supported_features: 63
+      state: 'on'
+    light.marvel:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 82
+      color_temp: 500
+      effect: none
+      friendly_name: Marvel
+      supported_features: 63
+      state: 'on'
+    light.pixar:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 66
+      hs_color:
+      - 44.211
+      - 22.353
+      rgb_color:
+      - 255
+      - 240
+      - 197
+      xy_color:
+      - 0.371
+      - 0.373
+      effect: none
+      friendly_name: Pixar
+      supported_features: 63
+      state: 'on'
+    light.halfdome:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      friendly_name: Halfdome
+      supported_features: 63
+      state: 'off'
+- id: '1610659776756'
+  name: LivingRoom BrightLights
+  entities:
+    light.343:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 255
+      color_temp: 235
+      effect: none
+      friendly_name: '343'
+      supported_features: 63
+      state: 'on'
+    light.bungie:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 255
+      color_temp: 179
+      effect: none
+      friendly_name: Bungie
+      supported_features: 63
+      state: 'on'
+    light.halfdome:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      friendly_name: Halfdome
+      supported_features: 63
+      state: unavailable
+    light.marvel:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 255
+      color_temp: 153
+      effect: none
+      friendly_name: Marvel
+      supported_features: 63
+      state: 'on'
+    light.pixar:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 255
+      color_temp: 153
+      effect: none
+      friendly_name: Pixar
+      supported_features: 63
+      state: 'on'
+- id: '1612547613245'
+  name: Movie Pause
+  entities:
+    light.bungie:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 56
+      color_temp: 411
+      effect: none
+      friendly_name: Bungie
+      supported_features: 63
+      state: 'on'
+    light.pixar:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      brightness: 148
+      hs_color:
+      - 244.941
+      - 33.333
+      rgb_color:
+      - 177
+      - 170
+      - 255
+      xy_color:
+      - 0.262
+      - 0.224
+      effect: none
+      friendly_name: Pixar
+      supported_features: 63
+      state: 'on'
+    light.halfdome:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      friendly_name: Halfdome
+      supported_features: 63
+      state: 'off'
+- id: '1615842993245'
+  name: Working Mode - Office Motion
+  entities:
+    light.54516840ecfabc992f68:
+      brightness: 122
+      friendly_name: Smart Dimmer Switch 2
+      supported_features: 1
+      state: 'on'
+    light.bungie:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      friendly_name: Bungie
+      supported_features: 63
+      state: 'off'
+    light.hue_color_downlight_1:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      friendly_name: Marvel
+      supported_features: 63
+      state: 'off'
+    light.master_bathroom_center:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      friendly_name: Master Bathroom Center
+      supported_features: 63
+      state: 'off'
+    light.masterbathright:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: MasterBathRight
+      supported_features: 43
+      state: 'off'
+    light.masterbathroomleft:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      friendly_name: MasterBathroomLeft
+      supported_features: 63
+      state: 'off'
+    light.masterhallway:
+      min_mireds: 153
+      max_mireds: 454
+      friendly_name: MasterHallway
+      supported_features: 43
+      state: unavailable
+    light.pixar:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - colorloop
+      - random
+      friendly_name: Pixar
+      supported_features: 63
+      state: 'off'
+    switch.85140653840d8e5589b9:
+      friendly_name: Bedroom light
+      state: 'off'
+    switch.04755546c44f33aa5e92:
+      friendly_name: Master Bedroom Hallway
+      state: 'off'

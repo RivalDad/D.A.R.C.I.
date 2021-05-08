@@ -1,0 +1,178 @@
+- id: '1608593134156'
+  alias: Dad-on-Phone
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.ego_phone_state
+    from: idle
+    to: ringing
+  - platform: state
+    entity_id: sensor.ego_phone_state
+    from: idle
+    to: offhook
+  condition:
+  - condition: state
+    entity_id: input_boolean.work_mode
+    state: 'on'
+  action:
+  - service: scene.turn_on
+    data: {}
+    entity_id: scene.onphone
+  mode: single
+- id: '1608593414426'
+  alias: DadOffPhone
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.ego_phone_state
+    from: offhook
+    to: idle
+  - platform: state
+    entity_id: sensor.ego_phone_state
+    from: ringing
+    to: idle
+  condition: []
+  action:
+  - service: scene.turn_on
+    data: {}
+    entity_id: scene.off_phone
+  mode: single
+- id: '1609203114191'
+  alias: Alert the troops when Lights are on during baby mode
+  description: ''
+  use_blueprint:
+    path: vorion/actionable-notifications-for-android.yaml
+    input:
+      notify_device: d34403c9f48c3a88d19b7a288b3ec349
+      trigger_entity: input_boolean.lights_turn_on
+      notification_title: Oh shoot, the baby lights are on.
+      notification_message: 'Hey, heads up that the lights are on and colton is still
+        sleeping '
+      action_1_title: 'Turn off all lights: '
+      first_action:
+      - service: scene.turn_on
+        data: {}
+        entity_id: scene.colton_asleep
+      - service: input_boolean.turn_off
+        data: {}
+        entity_id: input_boolean.lights_turn_on
+      action_2_title: Ignore
+      second_action:
+      - service: input_boolean.turn_off
+        data: {}
+        entity_id: input_boolean.lights_turn_on
+- id: '1609223531386'
+  alias: warn when baby mode
+  description: ''
+  trigger:
+  - platform: state
+    from: 'off'
+    to: 'on'
+    entity_id: light.masterbedroom
+  condition:
+  - condition: state
+    entity_id: input_boolean.babbymode
+    state: 'on'
+  action:
+  - service: input_boolean.turn_on
+    data: {}
+    entity_id: input_boolean.lights_turn_on
+  mode: restart
+- id: '1609573232856'
+  alias: New Automation
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.babbymode
+    from: 'off'
+    to: 'on'
+  condition:
+  - condition: time
+    after: '19:00:00'
+    before: '8:00:00'
+  action:
+  - service: media_player.media_play
+    data: {}
+    entity_id: media_player.bedroom_speaker
+  mode: single
+- id: '1609826841615'
+  alias: katie activated bathroom
+  description: ''
+  use_blueprint:
+    path: homeassistant/motion_light.yaml
+    input:
+      no_motion_wait: '120'
+      motion_entity: binary_sensor.hue_motion_sensor_1_motion
+      light_target:
+        entity_id:
+        - light.masterbathright
+        device_id: f00a5ab021ad0ffa144cfba66d1fa9b9
+        brightness: 1
+- id: '1609827211699'
+  alias: katie activated lights
+  description: ''
+  use_blueprint:
+    path: homeassistant/motion_light.yaml
+    input:
+      no_motion_wait: '120'
+      light_target:
+        device_id: f00a5ab021ad0ffa144cfba66d1fa9b9
+      motion_entity: binary_sensor.hue_motion_sensor_1_motion
+      brightness: 1
+- id: '1610054290437'
+  alias: bathroom lights off
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: light.master_bathroom_center
+    from: 'off'
+    to: 'on'
+    for: 00:09:00
+  condition:
+  - condition: time
+    after: 08:15
+    before: '16:00'
+  action:
+  - service: light.turn_off
+    data: {}
+    entity_id: light.master_bathroom_center
+  - service: light.turn_off
+    data: {}
+    entity_id: light.masterbathright
+  - service: light.turn_off
+    data: {}
+    entity_id: light.masterbathroomleft
+  mode: single
+- id: '1610835352501'
+  alias: Baby Mode Automation
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: input_boolean.babbymode
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: media_player.media_play
+    data:
+      data:
+        media_content_id: media-source:https://open.spotify.com/album/2WcPhPbhuOIpC217dnoPAu?si=R63CS96US06Mg33nVWIQ_g
+    entity_id: media_player.office_speaker
+  mode: single
+- id: '1613021466285'
+  alias: Tag test is scanned
+  description: ''
+  trigger:
+  - platform: tag
+    tag_id: 658cba16-5401-4e8b-bc7e-adcc3876197c
+  condition:
+  - condition: device
+    device_id: 8ff55555fbe13a6a8dd3a91b6ff7f618
+    domain: media_player
+    entity_id: media_player.entertainment_720
+    type: is_paused
+  action:
+  - service: media_player.media_play
+    data: {}
+    entity_id: media_player.emby_entertainment_720
+  mode: single

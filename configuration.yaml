@@ -1,0 +1,118 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+homeassistant:
+  name: D.A.R.C.I
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+  elevation: !secret homeassistant_elevation
+  unit_system: imperial
+  time_zone: America/Los_Angeles
+  external_url: !secret external_url
+  internal_url: !secret internal_url
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+frontend:
+  themes: !include themes.yaml
+
+openweathermap: 
+
+sensor:
+  - platform: mqtt
+    name: "XRP Price Tracker"
+    state_topic: "Home/Money/XRP/Price"
+    unit_of_measurement: "$"
+    #value_template: "{{ value_json.price }}"
+  - platform: mqtt
+    name: "ADA Price Tracker"
+    state_topic: "Home/Money/ADA/Price"
+    unit_of_measurement: "$"
+    #value_template: "{{ value_json.price }}"
+  - platform: mqtt
+    name: "XLM Price Tracker"
+    state_topic: "Home/Money/XLM/Price"
+    unit_of_measurement: "$"
+    #value_template: "{{ value_json.price }}"
+
+person:
+  - name: Everett
+    id: dada0323
+    device_trackers:
+      - device_tracker.ego
+  - name: Catherine
+    id: dada0323
+    device_trackers:
+      - device_tracker.catherines_iphone
+group:
+  490_people:
+    name: Awesome People
+    entities:
+      - device_tracker.ego
+      - device_tracker.catherines_iphone
+
+speedtestdotnet:
+  scan_interval:
+    minutes: 10
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
+media_player:
+  - platform: emby
+    host: https://emby.unsc.com
+    api_key: !secret emby_api_key
+  
+spotify:
+  client_id: !secret spotify_client_id
+  client_secret: !secret spotify_client_secret
+
+influxdb:
+  host: 192.168.1.25
+  database: homeassistant
+  username: Forthencho
+  password: !secret Influx_password
+  ssl: false
+  verify_ssl: false
+  max_retries: 3
+
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
+  # "Project ID" in the Device Access Console
+  project_id: !secret nest_project_id
+  # Provide the full path exactly as shown under "Subscription name" in Google Cloud Console
+  subscriber_id: projects/babawatch/subscriptions/babawatchsubscription
+
+#auth_providers:
+#   - type: homeassistant
+#   - type: trusted_networks
+#     trusted_networks:
+#       - 192.168.1.0/24
+#      - !secret external_ip
+#     allow_bypass_login: true
+
+#---------------------------------------
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+#scene: !include scenes.yaml
+#person: !include persons.yaml
+#---------------------------------------
+
+#http:
+  #server_port: !secret http_port
+  #ssl_certificate: !secret ssl_certificate
+  #ssl_key: !secret ssl_key
+  # ip_ban_enabled: True
+  # login_attempts_threshold: 5
+#http:
+#  ssl_certificate: /ssl/Darci-forthencho-com/darci.forthencho.com.ca-bundle
+#  ssl_key: /ssl/Darci-forthencho-com/darci.forthencho.com.ca-bundle
+#tuya:
+#  username: everett@forthencho.com
+#  password: unsc-Tuya123$
+#  country_code: 1

@@ -1,0 +1,9 @@
+person:
+  - name: Everett
+    id: dada0323
+    device_trackers:
+      - device_tracker.ego
+  - name: Catherine
+    id: dada0323
+    device_trackers:
+      - device_tracker.catherines_iphone
